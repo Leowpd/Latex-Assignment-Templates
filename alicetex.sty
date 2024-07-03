@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{alicetex}
+
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{bm}
+
+\RequirePackage{graphicx}
+\RequirePackage{parskip}
+\RequirePackage{xcolor}
+\RequirePackage[colorlinks=true]{hyperref}
+
+\definecolor{alicepurple}{rgb}{0.60,0.20,0.80}
+
+
+\newcommand{\question}[1]{\textcolor{alicepurple}{\emph{#1}}} % indicates question copied from assignment sheet, or otherwise just a section description
+
+
+\newcommand{\NN}[0]{\mathbb{N}} % Natural 
+\newcommand{\ZZ}[0]{\mathbb{Z}} % Integers
+\newcommand{\QQ}[0]{\mathbb{Q}} % Rationals
+\newcommand{\RR}[0]{\mathbb{R}} % Reals
+\newcommand{\CC}[0]{\mathbb{C}} % Complex Numbers
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norm
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert} % Absolute value
+
+%trig
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+
+%vectors
+\newcommand\colvec[1]{\begin{bmatrix}#1\end{bmatrix}} % column vector with square brackets (can also be used as row vector, see below)
+\newcommand\colvecbr[1]{\begin{pmatrix}#1\end{pmatrix}} % column vector with round brackets (can also be used as row vector, see below)
+% Column vector example: \colvec{1\\ 2\\ 3\\}
+% Row vector example: \colvec{1 & 2 & 3}
+
+
+
