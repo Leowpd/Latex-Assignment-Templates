@@ -20,6 +20,7 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{purplebackcolour}{rgb}{0.98, 0.95, 1}
 
 \newcommand{\quest}[1]{\textcolor{alicepurple}{\emph{#1}}} % indicates question copied from assignment sheet, or otherwise just a section description
 
@@ -49,7 +50,7 @@
 
 % Code styles
 
-\lstdefinestyle{mystyle}{
+\lstdefinestyle{defaultstyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{blue},
@@ -68,3 +69,21 @@
     tabsize=2
 }
 
+\lstdefinestyle{questionexample}{
+    backgroundcolor=\color{purplebackcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
