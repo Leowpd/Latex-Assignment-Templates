@@ -1,6 +1,7 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage{alicetex}
 \usepackage{parskip}
+\lstset{style=mystyle}
 
 \title{General Assignment Template}
 \author{Leo Duncan \\ ldun202, 657579290}
@@ -75,8 +76,19 @@ Note that when in "big" equation environment, \$\$, they give the same result. A
 
 \section{Code}
 \quest{Code code code code code}
-
 %be sure to include pseudocode examples too (220 ass 1)
+
+\begin{lstlisting}[language=MATLAB]
+Seq = randi(2,1,1000); % generate random sequence of coin flips
+k = 0;
+
+% while-loop that runs until the desired sequence, THH, is found
+while(Seq(k+1)~=2 || Seq(k+2)~=1 || Seq(k+3)~=1)
+    k = k + 1;
+end
+
+disp(k) % output how many flips before the sequence THH
+\end{lstlisting}
 
 
 
