@@ -62,10 +62,29 @@ $$\int_{-1}^{1} e^{x} \, dx$$
 Using \textbackslash \texttt{frac} $\frac{k^2+1}{k^3+1}$ and now using \textbackslash \texttt{dfrac} $\dfrac{k^2+1}{k^3+1}$.
 
 Note that when in "big" equation environment, \$\$, they give the same result. Avoid using \textbackslash \texttt{dfrac} unless necessary.
+\newpage
 
 
 \section{Graphics}
 \quest{Pictures and everything so exciting}
+
+Heres an example of two images side-by-side.
+
+\begin{figure}[!h]
+    \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{images/clownfishplot2.png}
+      \label{fig:f6}
+      \caption{Cobweb plot $C_0 = 1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+      \includegraphics[width=\textwidth]{images/clownfishplot3.png}
+      \label{fig:f7}
+      \caption{Cobweb plot $C_0 = 3$}
+    \end{subfigure}
+    \caption{Updated model cobweb plots.}
+\end{figure}
+
 
 
 
