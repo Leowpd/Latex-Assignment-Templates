@@ -68,7 +68,16 @@ Note that when in "big" equation environment, \$\$, they give the same result. A
 \section{Graphics}
 \quest{Pictures and everything so exciting}
 
-Heres an example of two images side-by-side.
+Here is an example of an image with a caption.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/clownfishplot1.png}
+    \label{fig:f5}
+    \caption{Clownfish model starting at population 31 (thousand).}
+\end{figure}
+
+Here is an example of two images side-by-side, with captions.
 
 \begin{figure}[!h]
     \begin{subfigure}[b]{0.45\textwidth}
