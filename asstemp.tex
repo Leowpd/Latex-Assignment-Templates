@@ -20,7 +20,7 @@
 \begin{equation*}
     \begin{split}
         a &= b + c \\
-        &= (b + d) - (d - c) \\
+        &= (b + c) \\
     \end{split}
 \end{equation*}
 
@@ -59,7 +59,7 @@ $$\int_{-1}^{1} e^{x} \, dx$$
 \subsection{(d)} %Using /frac and /dfrac
 \quest{Using \textbackslash \texttt{frac} and \textbackslash \texttt{dfrac}.}
 
-Using \textbackslash \texttt{frac} $\frac{k^2+1}{k^3+1}$ and now using \textbackslash \texttt{dfrac} $\dfrac{k^2+1}{k^3+1}$.
+Using \textbackslash \texttt{frac} $\frac{k^2+1}{k^3+1}$ and using \textbackslash \texttt{dfrac} $\dfrac{k^2+1}{k^3+1}$ and using \textbackslash \texttt{tfrac} $\tfrac{k^2+1}{k^3+1}$.
 
 Note that when in "big" equation environment, \$\$, they give the same result. Avoid using \textbackslash \texttt{dfrac} unless necessary.
 \newpage
@@ -73,22 +73,23 @@ Here is an example of an image with a caption.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\textwidth]{images/clownfishplot1.png}
-    \label{fig:f5}
+    \label{fig:f1}
     \caption{Clownfish model starting at population 31 (thousand).}
 \end{figure}
+
 
 Here is an example of two images side-by-side, with captions.
 
 \begin{figure}[!h]
     \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{images/clownfishplot2.png}
-      \label{fig:f6}
+      \label{fig:f2}
       \caption{Cobweb plot $C_0 = 1$}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=\textwidth]{images/clownfishplot3.png}
-      \label{fig:f7}
+      \label{fig:f3}
       \caption{Cobweb plot $C_0 = 3$}
     \end{subfigure}
     \caption{Updated model cobweb plots.}
@@ -121,8 +122,8 @@ disp(k) % output how many flips before the sequence THH
 
 
 
-%ACTUALLY MAYBE PUT THESE FINAL TWO IN A SEPEATE FILE (MAYBE COMBINE WHEN DONE)
-\section{Academic Writing}
+\section{Academic Writing} %ACTUALLY MAYBE PUT THESE FINAL TWO IN A SEPEATE FILE (MAYBE COMBINE WHEN DONE)
+
 \quest{How to format big chunks of writing}
 
 
