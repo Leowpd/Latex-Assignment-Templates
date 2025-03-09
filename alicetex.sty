@@ -25,12 +25,20 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \definecolor{purplebackcolour}{rgb}{0.98, 0.95, 1}
+\definecolor{commentsColor}{rgb}{0.5, 0.5, 0.5}
+\definecolor{keywordsColor}{rgb}{0.000000, 0.000000, 0.635294}
+\definecolor{stringColor}{rgb}{0.558215, 0.000000, 0.135316}
+\definecolor{verylightgray}{rgb}{0.9803921568627451, 0.9803921568627451, 0.9803921568627451}
+\definecolor{verylightblue}{rgb}{0.9686274509803922, 0.984313725490196, 0.9921568627450981}  % unused
+\definecolor{verylightblue2}{rgb}{0.9607843137254902, 0.984313725490196, 1}  % unused
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % GENERAL
 
 \newcommand{\quest}[1]{\textcolor{alicepurple}{\emph{#1}}} % indicates question copied from assignment sheet, or otherwise just a section description
+
+\newcommand{\codefont}{\fontfamily{pcr}\selectfont\scriptsize} % current code font
 
 \newcommand{\lQ}[0]{\lq\lq} % Left double quotation mark
 \newcommand{\rQ}[0]{\rq\rq} % Right double quotation mark
@@ -82,7 +90,67 @@
 
 % Code styles
 
-\lstdefinestyle{defaultstyle}{
+\lstdefinestyle{mainstyle}{
+    backgroundcolor=\color{verylightgray},              % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+    basicstyle=\codefont,                               % the size of the fonts that are used for the code
+    breakatwhitespace=false,                            % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                                    % sets automatic line breaking
+    captionpos=b,                                       % sets the caption-position to bottom
+    commentstyle=\color{commentsColor}\textit,          % comment style
+    deletekeywords={...},                               % if you want to delete keywords from the given language
+    % escapeinside={\%*}{*)},                           % if you want to add LaTeX within your code
+    extendedchars=true,                                 % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+    frame=tb,	                   	                    % adds a frame around the code
+    keepspaces=true,                                    % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+    keywordstyle=\color{keywordsColor}\bfseries,        % keyword style
+    language=Python,                                    % the language of the code (can be overrided per snippet)
+    otherkeywords={*,...},                              % if you want to add more keywords to the set
+    numbers=left,                                       % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                                      % how far the line-numbers are from the code
+    numberstyle=\tiny\color{commentsColor},             % the style that is used for the line-numbers
+    rulecolor=\color{black},                            % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    showspaces=false,                                   % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    showstringspaces=false,                             % underline spaces within strings only
+    showtabs=false,                                     % show tabs within strings adding particular underscores
+    stepnumber=1,                                       % the step between two line-numbers. If it's 1, each line will be numbered
+    stringstyle=\color{stringColor},                    % string literal style
+    tabsize=2,	                                        % sets default tabsize to 2 spaces
+    % title=\lstname,                                     % show the filename of files included with \lstinputlisting; also try caption instead of title
+    columns=fixed,                                       % Using fixed column width (for e.g. nice alignment)
+    literate={~}{{\raisebox{-0.6ex}{\fontfamily{pcr}\codefont{\char`~}}}}1  % Fixes tilde character
+}
+
+\lstdefinestyle{questionexample}{
+    backgroundcolor=\color{purplebackcolour},           % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+    basicstyle=\codefont,                               % the size of the fonts that are used for the code
+    breakatwhitespace=false,                            % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                                    % sets automatic line breaking
+    captionpos=b,                                       % sets the caption-position to bottom
+    commentstyle=\color{commentsColor}\textit,          % comment style
+    deletekeywords={...},                               % if you want to delete keywords from the given language
+    % escapeinside={\%*}{*)},                           % if you want to add LaTeX within your code
+    extendedchars=true,                                 % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+    frame=tb,	                   	                    % adds a frame around the code
+    keepspaces=true,                                    % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+    keywordstyle=\color{keywordsColor}\bfseries,        % keyword style
+    language=Python,                                    % the language of the code (can be overrided per snippet)
+    otherkeywords={*,...},                              % if you want to add more keywords to the set
+    numbers=left,                                       % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                                      % how far the line-numbers are from the code
+    numberstyle=\tiny\color{commentsColor},             % the style that is used for the line-numbers
+    rulecolor=\color{black},                            % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    showspaces=false,                                   % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    showstringspaces=false,                             % underline spaces within strings only
+    showtabs=false,                                     % show tabs within strings adding particular underscores
+    stepnumber=1,                                       % the step between two line-numbers. If it's 1, each line will be numbered
+    stringstyle=\color{stringColor},                    % string literal style
+    tabsize=2,	                                        % sets default tabsize to 2 spaces
+    % title=\lstname,                                     % show the filename of files included with \lstinputlisting; also try caption instead of title
+    columns=fixed                                       % Using fixed column width (for e.g. nice alignment)
+    literate={~}{{\raisebox{-0.6ex}{\fontfamily{pcr}\codefont{\char`~}}}}1  % Fixes tilde character
+}
+
+\lstdefinestyle{oldstyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{blue},
@@ -101,7 +169,7 @@
     tabsize=2
 }
 
-\lstdefinestyle{questionexample}{
+\lstdefinestyle{oldquestionexample}{
     backgroundcolor=\color{purplebackcolour},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{blue},

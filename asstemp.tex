@@ -1,7 +1,7 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage{alicetex}
 \usepackage{parskip}
-\lstset{style=defaultstyle}
+\lstset{style=mainstyle}
 
 \title{General Assignment Template}
 \author{Leo Duncan \\ ldun202, 657579290}
@@ -29,7 +29,7 @@
 
 Column vector square brackets: $\bm{x} = \colvec{1\\2\\3}$, round brackets: $\vec{v} = \colvecbr{4\\5\\6\\7}$.
 
-Column vector square brackets: $\bm{u} = \colvec{1&2&3}$;
+Row vector square brackets: $\bm{u} = \colvec{1&2&3}$;
 
 Round brackets: $\vec{w} = \colvecbr{4&5&6&7}$.
 
@@ -136,6 +136,7 @@ Here is an example of two images side-by-side, with captions.
 \quest{Code code code code code}
 %be sure to include pseudocode examples too (220 ass 1)
 
+\lstset{style=mainstyle}
 \begin{lstlisting}[language=MATLAB]
 Seq = randi(2,1,1000); % generate random sequence of coin flips
 k = 0;
@@ -147,8 +148,6 @@ end
 
 disp(k) % output how many flips before the sequence THH
 \end{lstlisting}
-
-
 
 
 \section{Academic Writing} %ACTUALLY MAYBE PUT THESE FINAL TWO IN A SEPEATE FILE (MAYBE COMBINE WHEN DONE)
