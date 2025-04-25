@@ -10,6 +10,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{subcaption} % for subfigures, please read documentation for some cool stuff with figures
 \RequirePackage{listings} % for code
+\usepackage{tikz}  % For FSM/NFA diagrams
 \RequirePackage[colorlinks=true]{hyperref}
 
 
@@ -66,11 +67,13 @@
 \newcommand{\abs}[1]{\left\lvert#1\right\rvert} % Absolute value
 
 \newcommand{\rel}[0]{\mathcal{R}} % relation R
+\newcommand{\pow}[0]{\mathcal{P}} % Powerset P
 \newcommand{\divs}[0]{\:|\;} % divides, e.g. a | b
 
 \newcommand{\defeq}{\mathrel{\mathop:}=} % definitional equality using =
 \newcommand{\defequiv}{\mathrel{\mathop:}\equiv} % definitional equality using \equiv
 \newcommand{\questeq}{\stackrel{?}{=}} % question equals ?=
+\newcommand{\rref}{\stackrel{\text{\tiny RREF}}{\sim}}  % RREF tilde, for going straight to reduced row echelon form
 
 \newcommand{\Inf}[0]{\text{Inf}} % uppercase version of \inf
 
