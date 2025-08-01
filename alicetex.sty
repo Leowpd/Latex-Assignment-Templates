@@ -88,6 +88,15 @@
 % Column vector example: \colvec{1\\ 2\\ 3\\}
 % Row vector example: \colvec{1 & 2 & 3}
 
+
+\newcommand{\mat}[1]{\left[\begin{matrix}#1\end{matrix}\right]}
+
+\newenvironment{bmat}
+  {\left[\begin{matrix}}
+  {\end{matrix}\right]}
+%
+
+
 % needs improvment on verticle spacing
 \newcommand\dickimplies[1]{\mathrel{{\begin{rcases}#1\;\end{rcases}}{\implies}}} % Tom's famous Dick Implies symbol
 % e.g. \dickimplies{1\\ 2\\ 3\\}
