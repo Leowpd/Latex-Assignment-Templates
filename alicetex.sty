@@ -10,7 +10,10 @@
 \RequirePackage{xcolor}
 \RequirePackage{subcaption} % for subfigures, please read documentation for some cool stuff with figures
 \RequirePackage{listings} % for code
+\usepackage{array}
 \usepackage{tikz}  % For FSM/NFA diagrams
+\usepackage{xparse}
+\usepackage{calc}
 \RequirePackage[colorlinks=true]{hyperref}
 
 
@@ -88,13 +91,31 @@
 % Column vector example: \colvec{1\\ 2\\ 3\\}
 % Row vector example: \colvec{1 & 2 & 3}
 
-
 \newcommand{\mat}[1]{\left[\begin{matrix}#1\end{matrix}\right]}
+
+\newcounter{matcols}
+\newcommand{\augmatcols}[2]{%
+  \setcounter{matcols}{#1}%
+  \addtocounter{matcols}{-1}%
+  \left[\begin{array}{@{}*{\value{matcols}}{c}|c@{}}#2\end{array}\right]%
+}
+
 
 \newenvironment{bigmat}
   {\left[\begin{matrix}}
   {\end{matrix}\right]}
 %
+\newcounter{numcols}
+\newenvironment{bigaugmat}[1]{%
+  \setcounter{numcols}{#1}%
+  \addtocounter{numcols}{-1}%
+  \left[\begin{array}{@{}*{\value{numcols}}{c}|c@{}}%
+}{%
+  \end{array}\right]%
+}
+%
+
+
 
 
 % needs improvment on verticle spacing
